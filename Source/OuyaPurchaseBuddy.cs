@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Microsoft.Xna.Framework.GamerServices;
 
-namespace OuyaPurchaseHelper.Ouya
+namespace OuyaPurchaseHelper
 {
 	/// <summary>
 	/// This is a thing that does some of the work for the OUYA purchasing api
@@ -56,6 +56,11 @@ namespace OuyaPurchaseHelper.Ouya
 		/// </summary>
 		private bool PurchasablesChecked = false;
 
+		/// <summary>
+		/// The name of the "full game" item the player can buy.
+		/// </summary>
+		protected string PurchaseItem { get; set; }
+
 		#endregion //Member Variables
 
 		#region Properties
@@ -72,9 +77,10 @@ namespace OuyaPurchaseHelper.Ouya
 		/// <summary>
 		/// Constructs a new screen manager component.
 		/// </summary>
-		public OuyaPurchaseBuddy(Game game, IList<Purchasable> purchasables, OuyaFacade purchaseFacade)
+		public OuyaPurchaseBuddy(Game game, IList<Purchasable> purchasables, OuyaFacade purchaseFacade, string fullGame)
 		{
 			ReceiptsChecked = false;
+			PurchaseItem = fullGame;
 
 			//always start in trial mode
 			SetTrialMode(true);
@@ -283,7 +289,7 @@ namespace OuyaPurchaseHelper.Ouya
 					foreach (Receipt receipt in TaskRequestReceipts.Result)
 					{
 						Debug.WriteLine(string.Format("The receipt item is {0}", receipt.Identifier));
-						if ("Opposites_FullGame" == receipt.Identifier)
+						if (PurchaseItem == receipt.Identifier)
 						{
 							bFound = true;
 							break;
