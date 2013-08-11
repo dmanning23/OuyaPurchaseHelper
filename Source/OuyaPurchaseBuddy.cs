@@ -75,8 +75,13 @@ namespace OuyaPurchaseHelper
 		#region Initialization
 
 		/// <summary>
-		/// Constructs a new screen manager component.
+		/// Initializes a new instance of the <see cref="OuyaPurchaseHelper.OuyaPurchaseBuddy"/> class.
 		/// </summary>
+		/// <param name="game">Game.</param>
+		/// <param name="purchasables">Purchasables.</param>
+		/// <param name="purchaseFacade">Purchase facade.</param>
+		/// <param name="fullGame">This is the name of the item the player purchases to unlock the full version of the game.
+		/// This has to match the Identifier of an item on your https://devs.ouya.tv/developers/products page!!!</param>
 		public OuyaPurchaseBuddy(Game game, IList<Purchasable> purchasables, OuyaFacade purchaseFacade, string fullGame)
 		{
 			ReceiptsChecked = false;
