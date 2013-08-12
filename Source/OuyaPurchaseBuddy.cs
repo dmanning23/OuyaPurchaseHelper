@@ -373,4 +373,3 @@ namespace OuyaPurchaseHelper
 		#endregion //Public Methods
 	}
 }
-
