@@ -1,11 +1,11 @@
 using Microsoft.Xna.Framework;
+using TrialModeBuddy;
 using System;
 using System.Collections.Generic; 
 using Ouya.Console.Api;
-using Ouya.Csharp;
+using Ouya.Console;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using Microsoft.Xna.Framework.GamerServices;
 
 namespace OuyaPurchaseHelper
 {
@@ -29,7 +29,7 @@ namespace OuyaPurchaseHelper
 		/// <summary>
 		/// The task to get the gamer id
 		/// </summary>
-		private Task<string> TaskRequestGamer = null;
+		private Task<GamerInfo> TaskRequestGamer = null;
 
 		/// <summary>
 		/// The task to get a list of the dude's receipts
@@ -111,7 +111,7 @@ namespace OuyaPurchaseHelper
 		{
 			//get the player uuid
 			Debug.WriteLine("Requesting gamer uuid...");
-			TaskRequestGamer = PurchaseFacade.RequestGamerUuidAsync();
+			TaskRequestGamer = PurchaseFacade.RequestGamerInfoAsync();
 
 			//get the receipts
 			Debug.WriteLine("Requesting receipts...");
@@ -343,7 +343,7 @@ namespace OuyaPurchaseHelper
 					{
 						m_uniquePurchaseId = Guid.NewGuid().ToString().ToLower();
 					}
-					TaskRequestPurchase = PurchaseFacade.RequestPurchaseAsync(product, m_uniquePurchaseId);
+					TaskRequestPurchase = PurchaseFacade.RequestPurchaseAsync(product);
 				}
 			}
 		}
