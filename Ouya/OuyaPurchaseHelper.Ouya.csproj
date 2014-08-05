@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="..\Source\OuyaPurchaseBuddy.cs" />
+    <Compile Include="..\Source\ReceiptBreadCrumb.cs">
+      <Link>ReceiptBreadCrumb.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -65,6 +68,10 @@
     <ProjectReference Include="..\..\TrialModeBuddy\Ouya\TrialModeBuddy.Ouya.csproj">
       <Project>{5CBF4762-F77E-48BA-B84B-4AFDC2B093D8}</Project>
       <Name>TrialModeBuddy.Ouya</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EasyStorage\Ouya\EasyStorage.Ouya.csproj">
+      <Project>{832F9B24-0E36-473C-945E-5C4EC884568C}</Project>
+      <Name>EasyStorage.Ouya</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
