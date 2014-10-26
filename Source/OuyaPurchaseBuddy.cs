@@ -1,11 +1,10 @@
 using Microsoft.Xna.Framework;
-using TrialModeBuddy;
-using System;
-using System.Collections.Generic; 
 using Ouya.Console.Api;
-using Ouya.Console;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
+using TrialModeBuddy;
 
 namespace OuyaPurchaseHelper
 {

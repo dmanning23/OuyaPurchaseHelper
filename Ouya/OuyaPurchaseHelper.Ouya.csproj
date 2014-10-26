@@ -61,10 +61,6 @@
       <Project>{493A4B6F-98CE-4000-8A0C-4A4726299061}</Project>
       <Name>Ouya.Console.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Ouya.csproj">
-      <Project>{8BEA875D-66D2-4A5F-B137-83D262A3851D}</Project>
-      <Name>MonoGame.Framework.Ouya</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\TrialModeBuddy\Ouya\TrialModeBuddy.Ouya.csproj">
       <Project>{5CBF4762-F77E-48BA-B84B-4AFDC2B093D8}</Project>
       <Name>TrialModeBuddy.Ouya</Name>
@@ -72,6 +68,10 @@
     <ProjectReference Include="..\..\EasyStorage\Ouya\EasyStorage.Ouya.csproj">
       <Project>{832F9B24-0E36-473C-945E-5C4EC884568C}</Project>
       <Name>EasyStorage.Ouya</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.Ouya.csproj">
+      <Project>{8BEA875D-66D2-4A5F-B137-83D262A3851D}</Project>
+      <Name>MonoGame.Framework.Ouya</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
