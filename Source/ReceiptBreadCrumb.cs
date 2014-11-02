@@ -45,7 +45,7 @@ namespace OuyaPurchaseHelper
 
 		/// <summary>
 		/// Gets or sets the name of the file.
-		/// "OppositesReceipt.xml";
+		/// "RoboJetsReceipt.xml";
 		/// </summary>
 		/// <value>The name of the file.</value>
 		private string Filename { get; set; }
